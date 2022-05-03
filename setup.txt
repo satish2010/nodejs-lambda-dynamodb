@@ -1,0 +1,9 @@
+
+dynamodb_local_latest
+java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+
+aws --version
+aws dynamodb list-tables --endpoint-url http://localhost:8000
+aws dynamodb scan \
+    --table-name Scranton \     
+    --endpoint-url http://localhost:8000
